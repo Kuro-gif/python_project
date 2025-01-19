@@ -1,47 +1,72 @@
 import tkinter as tk
 from tkinter import ttk
-#Dictionary of 20 Ijaw words with their meanings
-ijaw_dictionary = {
-    "Amabe": "Good morning",
-    "Torubara": "Love",
-    "Belemu": "Thank you",
-    "Keme" : "Water",
-    "Ogbo" : "House",
-    "Ayibai": "Friend",
-    "Ebi": "Family",
-    "Buofegha": "Happy",
-    "Igoni": "Sky",
-    "Tamuno": "God",
-    "Tor": "Life",
-    "Obo": "Hand",
-    "Akpo": "World",
-    "Ayiba": 'Kindness',
-    "Kuro": "Road",
-    "Kabo": "Hello",
-    "Bobo": "Child",
-    "Furo": "Light",
-    "Oku": "Fire",
-    "Seigbei": "Peace",
+#dictionary of 20 yoruba words with their meanings
+yoruba_dictionary = {
+    "Owo" : "Money",
+    "Ese" : "Leg",
+    "Eja" : "Fish",
+    "Ila" : "Okra",
+    "Oruko" : "Name",
+    "Bata" : "Shoe",
+    "Omo" : "Child",
+    "Aja" : "Cat",
+    "Eye" : "Bird",
+    "Ewa" : "Beans",
+    "Ola" : "Wealth",
+    "Wa" : "Come",
+    "Lo" : "Go",
+    "Ororo" : "Oil",
+    "Isu" : "Yam",
+    "Omi" : "Water",
+    "Oju" : "Face",
+    "Ina": "Light",
+    "Otutu" : "Cold",
+    "Ife" : "Love",
 }
+
+
 # Create the main window
 root = tk.Tk()
-root . title("Dictionary")
-root . geometry("400x300")
-# Create a function to display the meaning
+root . title("Yoruba Dictionary")
+root . geometry("400x350")
+
+
+#create function to display the meaning
 def show_meaning():
     word = word_entry . get() . capitalize()
-    meaning = ijaw_dictionary . get(word, "Word not found in dictionary . ")
-    result_label . config(text = f"Meaning: {meaning}")
-# Create UI elements
-title_label = tk . Label(root,  text="Dictionary", font=("Arial", 16))
+    meaning = yoruba_dictionary . get(word, "Translation not found in dictionary . ")
+    result_label . config(text = f"Translation: {meaning}")
+
+
+#create UI elements
+title_label = tk . Label(root, text="Yoruba Dictionary", font=("Time New Roman", 18))
 title_label . pack(pady = 10)
-word_label = tk.Label(root, text="Enter a Word : ")
-word_label . pack()
-word_entry = ttk.Entry(root,  width=30)
+word_label = tk.Label(root, text="Search for a Yoruba Word : ")
+word_label . pack ()
+word_entry = ttk.Entry(root, width=30)
 word_entry.pack(pady=5)
-search_button = ttk . Button(root,  text = "ijaw", command = show_meaning)
-search_button . pack(pady = 10)
-result_label = tk.Label(root,  text = "Meaning:", font = ("Arial", 12))
+search_button = ttk.Button(root, text="Translate", command = show_meaning)
+search_button . pack(pady=10)
+result_label = tk.Label(root, text= "Translation", font= ("Time New Roman",13))
 result_label . pack(pady = 10)
-#Run the main loop
+
+#run the main loop
 root . mainloop()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
